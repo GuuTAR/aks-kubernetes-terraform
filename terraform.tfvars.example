@@ -1,0 +1,15 @@
+resource_group_name = "aks-rg"
+location            = "eastus"
+cluster_name        = "aks-cluster"
+dns_prefix          = "aks-cluster"
+
+vnet_address_space       = ["10.10.0.0/16"]
+subnet_address_prefixes  = ["10.10.1.0/24"]
+
+node_count   = 2
+node_vm_size = "Standard_DS2_v2"
+
+tags = {
+  environment = "dev"
+  managed_by  = "terraform"
+}
